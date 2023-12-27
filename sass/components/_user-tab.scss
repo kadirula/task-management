@@ -1,0 +1,42 @@
+.user-tab {
+  @include themify($themes) {
+    color: themed("text-grey-color");
+    &__head {
+      margin-bottom: 2rem;
+      padding: 0 3rem;
+      &-title {
+        color: themed("text-grey-color");
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    }
+
+    &__body {
+      padding-right: 3rem;
+    }
+    &__list{
+      &-item{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 3rem;
+        margin: 0.5rem 0;
+        font-weight: 600;
+        cursor: pointer;
+        &.active{
+          background: themed("nav-item-bg-color");
+          color: themed("text-title-color");
+          border-top-right-radius: 2rem;
+          border-bottom-right-radius: 2rem;
+        }
+      }
+    }
+    &__content{
+      &-item{
+        display: none;
+        &.show{
+          display: block;
+        }
+      }
+    }
+  }
+}

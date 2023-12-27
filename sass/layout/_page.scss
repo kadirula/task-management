@@ -1,0 +1,23 @@
+.page {
+  @include themify($themes) {
+    display: flex;
+    &__left {
+      width: 20%;
+      background: themed("body-bg-color");
+      padding: 3rem 0;
+      height: 100vh;
+      border-right: 0.1rem solid themed("border-color");
+    }
+    &__right {
+      width: 80%;
+      background: themed("content-bg-color");
+    }
+    &__header{
+      height: 5rem;
+      background: themed("body-bg-color");
+    }
+    &__content{
+      padding: 3rem;
+    }
+  }
+}

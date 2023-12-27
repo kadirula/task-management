@@ -1,0 +1,15 @@
+.sidebar{
+    @include themify($themes) {
+        &__head{
+            margin-bottom: 3rem;
+            padding: 0 3rem;
+        }
+        &__logo{
+            font-size: 5rem;
+            color: themed("text-title-color");
+        }
+        &__body{
+            
+        }
+    }
+}

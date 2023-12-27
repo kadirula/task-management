@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Fontawesome 6.5.1 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+
+    <div class="page">
+        <div class="page__left">
+            <div class="sidebar">
+                <div class="sidebar__head">
+                    <h1 class="sidebar__logo">kanban</h1>
+                </div>
+    
+                <div class="sidebar__body">
+                    <div class="user-tab">
+                        <div class="user-tab__head">
+                            <h4 class="user-tab__head-title">All Users (4)</h4>
+                        </div>
+                        <div class="user-tab__body">
+                            <ul class="user-tab__list">
+                                <li class="user-tab__list-item active" data-tab="user-1">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span>User - 1</span>
+                                </li>
+                                <li class="user-tab__list-item" data-tab="user-2">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span>User - 2</span>
+                                </li>
+                                <li class="user-tab__list-item" data-tab="user-3">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span>User - 3</span>
+                                </li>
+                                <li class="user-tab__list-item" data-tab="user-4">
+                                    <i class="fa-regular fa-user"></i>
+                                    <span>User - 4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page__right">
+            <div class="page__header">
+
+            </div>
+            <div class="page__content">
+                <div class="user-tab">
+                    <div class="user-tab__content">
+                        <div class="user-tab__content-item show" id="user-1">User - 1</div>
+                        <div class="user-tab__content-item" id="user-2">User - 2</div>
+                        <div class="user-tab__content-item" id="user-3">User - 3</div>
+                        <div class="user-tab__content-item" id="user-4">User - 4</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

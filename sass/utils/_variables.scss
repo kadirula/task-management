@@ -1,0 +1,52 @@
+$themes: (
+  light: (
+        //-------------------- body --------------------//
+    body-bg-color:#2C2C38,
+    content-bg-color:#21212D,
+
+    //------------------ navbar -------------------//
+    nav-item-bg-color:#645FC6,
+    nav-item-active-color:#6058B2,
+
+    //------------------- text --------------------//
+    text-title-color:#ffffff,
+    text-grey-color:#717785,
+
+    //------------------ border -------------------//
+    border-color:#42424b,
+
+    //------------------ card ---------------------// 
+    card-tag-blue-color:#4CC2E4,
+    card-tag-purple-color:#8472F1,
+    card-tag-green-color:#6BE0AC,
+
+    //------------------ column -------------------//
+    column-bg-color:#23232F,
+    column-text-grey-color:#888C99,
+  ),
+  dark: (
+    //-------------------- body --------------------//
+    body-bg-color:#2C2C38,
+    content-bg-color:#21212D,
+
+    //------------------ navbar -------------------//
+    nav-item-bg-color:#645FC6,
+    nav-item-active-color:#6058B2,
+
+    //------------------- text --------------------//
+    text-title-color:#ffffff,
+    text-grey-color:#717785,
+
+    //------------------ border -------------------//
+    border-color:#42424b,
+
+    //------------------ card ---------------------// 
+    card-tag-blue-color:#4CC2E4,
+    card-tag-purple-color:#8472F1,
+    card-tag-green-color:#6BE0AC,
+
+    //------------------ column -------------------//
+    column-bg-color:#23232F,
+    column-text-grey-color:#888C99,
+  ),
+);

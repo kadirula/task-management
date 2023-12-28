@@ -1,0 +1,44 @@
+
+@function random-color() {
+  @return rgb(random(256), random(101), random(256));
+}
+
+.kanban {
+  @include themify($themes) {
+    display: flex;
+    gap: 2rem;
+
+    $kanbanCount: 10;
+    $kanbanColors: ();
+
+    @for $i from 1 through $kanbanCount {
+      $currentColor: random-color();
+      $kanbanColors: append($kanbanColors, $currentColor);
+
+      .kanban__item:nth-child(#{$i}){
+        .kanban__title {
+          position: relative;
+          color: themed("text-grey-color");
+          font-weight: 600;
+          padding-left: 2rem;
+  
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            background: nth($kanbanColors, $i);
+          }
+        }
+      }
+    }
+    &__content{
+        min-height: 70rem;
+        width: $kanban-width;
+    } 
+  }
+}

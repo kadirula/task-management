@@ -1,0 +1,13 @@
+.button{
+    @include themify($themes) {
+        border: 0;
+        padding: 1rem 3rem;
+        background: themed("button-color");
+        color: themed("button-text-color");
+        border-radius: 3rem;
+        transition: all .5s;
+        &:hover{
+            background: darken(themed("button-color"), 10%);
+        }
+    }
+}

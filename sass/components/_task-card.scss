@@ -1,0 +1,16 @@
+.task-card {
+    @include themify($themes) {
+        background: themed("task-card-bg");
+        width: $kanban-width;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        &__head{
+            color: themed("text-title-color");
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    }
+  }
+  

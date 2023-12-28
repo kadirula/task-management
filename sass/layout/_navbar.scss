@@ -1,0 +1,17 @@
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 3rem;
+
+    &__title{
+        color: themed("text-title-color");
+        font-weight: 600;
+        font-size: 2rem;
+    }
+    &__action{
+        
+    }
+  }
+}

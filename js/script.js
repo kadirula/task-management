@@ -13,19 +13,41 @@ const userTabContentItems = document.querySelectorAll('.user-tab__content-item')
 userTabListItems.forEach(tabItem => {
     if(tabItem){
         tabItem.addEventListener('click', () => {
-            removeClassElements(userTabListItems, 'active');
-            tabItem.classList.add('active');
+            
             const dataTab = tabItem.getAttribute('data-tab');
-            const tabContent = document.getElementById(dataTab);
-            if(tabContent){
-                removeClassElements(userTabContentItems, 'show');
-                tabContent.classList.add('show')
+            
+            if(dataTab){
+                removeClassElements(userTabListItems, 'active');
+                tabItem.classList.add('active');
+                
+                const tabContent = document.getElementById(dataTab);
+                if(tabContent){
+                    removeClassElements(userTabContentItems, 'show');
+                    tabContent.classList.add('show')
+                }
             }
         })
     }
 });
-
 /******************* end:: USER TAB *********************/
+
+/******************* begin:: KANBAN | DRAG & DROP *********************/
+const kanbanDropItems = document.querySelectorAll('.kanban__content');
+
+kanbanDropItems.forEach(dropItem => {
+    if(dropItem){
+        new Sortable(dropItem, {
+            group: 'kanban',
+            animation: 150,
+            onAdd: function (evt) {
+                console.log('Added:', evt);
+            }
+        })
+    }
+})
+
+/******************* end:: KANBAN | DRAG & DROP *********************/
+
 
 /******************* begin:: FUNCTIONS *********************/
 function removeClassElements(elements, className){

@@ -1,0 +1,40 @@
+.task-form{
+    @include themify($themes) {
+        .form-label{
+            color: themed("text-title-color");
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .form-control{
+            background: transparent;
+            padding: 1rem 1rem;
+            border-color: themed("border-color");
+            color: themed("text-title-color");
+            font-size: 1.5rem;
+            appearance: auto;
+            &:focus{
+                outline: 0;
+                box-shadow: none;
+            }
+            &::placeholder{
+                color: themed("text-grey-color");
+            }
+        }
+        .form-group{
+            margin-bottom: 2rem;
+        }
+        .input-group{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .input-action{
+            color: themed("text-grey-color");
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        select option{
+            background: themed("body-bg-color");
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.modal{
+    @include themify($themes) {
+        &-header{
+            border: 0;
+            color: themed("text-title-color");
+        }
+        &-title{
+            font-size: 2rem !important;
+        }
+        &-content{
+            background: themed("body-bg-color");
+        }
+    }
+}

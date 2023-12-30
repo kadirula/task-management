@@ -2,12 +2,26 @@
     @include themify($themes) {
         border: 0;
         padding: 1rem 3rem;
-        background: themed("button-color");
-        color: themed("button-text-color");
         border-radius: 3rem;
         transition: all .5s;
-        &:hover{
-            background: darken(themed("button-color"), 10%);
+        &--main{
+            background: themed("button-color");
+            color: themed("button-text-color");
+            &:hover{
+                background: darken(themed("button-color"), 10%);
+            }
         }
+        &--light{
+            background: themed("button-light-color");
+            color: themed("button-main-color");
+            &:hover{
+                background: darken(themed("button-light-color"), 10%);
+            }
+        }
+        &--w-full{
+            width: 100%;
+            text-align: center;
+        }
+        
     }
 }

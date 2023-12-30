@@ -3,6 +3,7 @@ $themes: (
         //-------------------- body --------------------//
     body-bg-color:#2C2C38,
     content-bg-color:#21212D,
+    main-color: #645FC6,
 
     //------------------ navbar -------------------//
     nav-item-bg-color:#645FC6,
@@ -27,42 +28,47 @@ $themes: (
     //------------------ button -------------------//
     button-color: #6058B2,
     button-text-color: #fff,
+    button-main-color: #6058B2,
+    button-light-color: #fff,
 
     //------------------ task-card -------------------//
     task-card-bg: #2C2C38,
 
   ),
   dark: (
-    //-------------------- body --------------------//
-    body-bg-color:#2C2C38,
-    content-bg-color:#21212D,
+   //-------------------- body --------------------//
+   body-bg-color:#2C2C38,
+   content-bg-color:#21212D,
+   main-color: #645FC6,
 
-    //------------------ navbar -------------------//
-    nav-item-bg-color:#645FC6,
-    nav-item-active-color:#6058B2,
+   //------------------ navbar -------------------//
+   nav-item-bg-color:#645FC6,
+   nav-item-active-color:#6058B2,
 
-    //------------------- text --------------------//
-    text-title-color:#ffffff,
-    text-grey-color:#717785,
+   //------------------- text --------------------//
+   text-title-color:#ffffff,
+   text-grey-color:#717785,
 
-    //------------------ border -------------------//
-    border-color:#42424b,
+   //------------------ border -------------------//
+   border-color:#42424b,
 
-    //------------------ card ---------------------// 
-    card-tag-blue-color:#4CC2E4,
-    card-tag-purple-color:#8472F1,
-    card-tag-green-color:#6BE0AC,
+   //------------------ card ---------------------// 
+   card-tag-blue-color:#4CC2E4,
+   card-tag-purple-color:#8472F1,
+   card-tag-green-color:#6BE0AC,
 
-    //------------------ column -------------------//
-    column-bg-color:#23232F,
-    column-text-grey-color:#888C99,
+   //------------------ column -------------------//
+   column-bg-color:#23232F,
+   column-text-grey-color:#888C99,
 
-    //------------------ button -------------------//
-    button-color: #6058B2,
-    button-text-color: #fff,
+   //------------------ button -------------------//
+   button-color: #6058B2,
+   button-text-color: #fff,
+   button-main-color: #6058B2,
+   button-light-color: #fff,
 
-    //------------------ task-card -------------------//
-    task-card-bg: #2C2C38,
+   //------------------ task-card -------------------//
+   task-card-bg: #2C2C38,
 
   ),
 );

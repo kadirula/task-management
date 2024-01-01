@@ -1,4 +1,53 @@
 const subtasks = [];
+const kanbanItems = [];
+const users = [
+    {
+        id: 1,
+        name: 'User - 1',
+        kanban: [
+            {
+                title: 'Todo',
+                cards: [
+                    {
+                        head: 'Card Title - 1',
+                        description: '',
+                        subtasks: [
+                            {
+                                id: 1,
+                                name: 'Subtask - 1'
+                            },
+                            {
+                                id: 2,
+                                name: 'Subtask - 2'
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 1,
+        name: 'User - 2',
+        kanban: [
+            {
+                title: 'Doing',
+                cards: [
+                    {
+                        head: 'Card Title - 1',
+                        description: '',
+                        subtasks: [
+                            {
+                                id: 1,
+                                name: ''
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+];
 
 
 /******************* THEME DARK / LIGHT *********************/
@@ -7,6 +56,78 @@ const body = document.body;
 
 body.classList.add(`theme-${theme}`);
 
+
+
+
+/******************* begin:: USERS  *********************/
+const userListItem = document.querySelector('.user-tab__list');
+if(userListItem){
+
+    users.map((user_item, index) => {
+        const itemIndex = index + 1;
+        const item = `
+        <li class="user-tab__list-item ${itemIndex == 1 && 'active'}" data-tab="user-${itemIndex}">
+        <i class="fa-regular fa-user"></i>
+        <span>${user_item.name}</span>
+        </li>`;
+        
+        userListItem.innerHTML += item;
+    });
+}
+/******************* end:: USERS  *********************/
+
+/******************* begin:: USER CONTENT  *********************/
+const userTabContent = document.querySelector('.user-tab__content');
+if(userTabContent){
+
+    users.map((user_item, index) => {
+        const itemIndex = index + 1;
+        const item = `
+        <div class="user-tab__content-item ${itemIndex == 1 && 'show'}" id="user-${itemIndex}">
+            <div class="kanban"></div>
+        </div>`;
+
+        userTabContent.innerHTML += item;
+
+
+        const userTabKanban = document.querySelector(`#user-${itemIndex} .kanban`);
+
+        if(userTabKanban){
+            const kanbans = user_item.kanban;
+            kanbans.map(kanban_item => {
+                userTabKanban.innerHTML += `
+                    <div class="kanban__item">
+                        <h4 class="kanban__title">${kanban_item.title}</h4>
+                        <div class="kanban__content"></div>
+                    </div>
+                `;
+
+                const userKanbanContent = userTabKanban.querySelector('.kanban__content');
+
+                if(userKanbanContent){
+                    const taskCards = kanban_item.cards;
+                    taskCards.map(task_item => {
+
+                        userKanbanContent.innerHTML += `
+                        <div class="task-card">
+                            <div class="task-card__head">${task_item.head}</div>
+                            <div class="task-card__body">
+                                0 of ${task_item.subtasks.length} subtasks
+                            </div>
+                        </div>
+                        `;
+                    })
+                }
+            })
+        }
+    });
+
+
+    
+
+
+}
+/******************* end:: USER CONTENT  *********************/
 
 
 

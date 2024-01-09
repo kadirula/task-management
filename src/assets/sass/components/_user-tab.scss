@@ -22,6 +22,9 @@
         margin: 0.5rem 0;
         font-weight: 600;
         cursor: pointer;
+        &--colors{
+          color: themed("main-color");
+        }
         &.active{
           background: themed("nav-item-bg-color");
           color: themed("text-title-color");
